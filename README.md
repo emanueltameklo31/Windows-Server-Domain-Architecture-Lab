@@ -87,7 +87,7 @@ On the **INTERNAL** adapter:
 2. Create an Organizational Unit (OU) like:
 
    * `_ADMINS`
-3. Create a user (example: `yourname.admin`)
+3. Create a user (example: `a-initial of first name + lastname` i.e a-jdoe for john doe)
 4. Add user to:
 
    - **Domain Admins** (and optionally Enterprise Admins for lab use)
