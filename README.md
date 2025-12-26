@@ -22,6 +22,18 @@ This project was designed and deployed to simulate an enterprise Active Director
 - Connected exclusively to the **internal network**
 - Accesses the internet securely **through the Domain Controller**
 
+### Network Architecture Overview
+
+[ Internet ]
+     |
+   ( NAT )
+     |
+[ Domain Controller ]
+     |
+[ Internal Network ]
+     |
+[ Windows 10 Client ]
+
 ---
 
 ## 1) Downloads (one-time)
