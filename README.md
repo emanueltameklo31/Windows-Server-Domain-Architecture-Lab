@@ -15,6 +15,9 @@ This project was designed and deployed to simulate an enterprise Active Director
 ---
 
 ## 1) Downloads (one-time)
+
+⭐Goal: Prepare the virtualization and operating system resources required to simulate an enterprise Windows domain environment.
+
 1. Install **Oracle VirtualBox** 
 2. Download ISOs:
    * **Windows Server 2019** You can use this link: https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019
@@ -24,6 +27,9 @@ This project was designed and deployed to simulate an enterprise Active Director
 ---
 
 ## 2) Create the Domain Controller VM (Server 2019)
+
+⭐Goal: Create a dedicated virtual server to act as the centralized identity, authentication, and network services host.
+
 1. Open **VirtualBox → New**
 2. Name: `DC` (or `Domain Controller`)
 3. Type: **Microsoft Windows**
@@ -42,13 +48,19 @@ This project was designed and deployed to simulate an enterprise Active Director
 ---
 
 ## 3) Install Windows Server 2019
+
+⭐Goal: Deploy a secure server operating system to support enterprise identity and infrastructure services.
+
 1. Start the DC VM
 2. Install **Windows Server 2019 Standard (Desktop Experience)** 
-3. Create the local Administrator password and sign in 
+3. Create the local Administrator password and sign in (I would suggest "Password1") 
 
 ---
 
 ## 4) Name the server + set the Internal NIC static IP
+
+⭐Goal: Ensure consistent identification and reliable network communication for domain and DNS services.
+
 ### A) Rename the server
 - Server Manager → Local Server → Computer name → rename to something like `DC` → reboot
 
@@ -69,7 +81,9 @@ On the **INTERNAL** adapter:
 
 ---
 
-## 5) Install AD DS (and DNS) + promote to Domain Controller
+## 5) Install Active Directory Domain Services (and DNS) + promote to Domain Controller
+
+⭐Goal: Implement centralized identity, authentication, and authorization for the enterprise environment.
 
 1. Server Manager → **Add Roles and Features**
 2. Role: **Active Directory Domain Services (AD DS)**
@@ -77,11 +91,13 @@ On the **INTERNAL** adapter:
 3. After install: click the flag notification → **Promote this server to a domain controller**
 4. Choose **Add a new forest**
 5. Domain name (example): `mydomain.com`
-6. Set the DSRM password → Install → Reboot
+6. Set the Directory Services Restore Mode password → Install → Reboot
 
 ---
 
-## 6) Create an admin OU + a “Domain Admin” user (good practice)
+## 6) Create an admin Organizational Unit + a “Domain Admin” user (good practice)
+
+⭐Goal: Enforce role separation and least-privilege principles for administrative access.
 
 1. Open **Active Directory Users and Computers (ADUC)**
 2. Create an Organizational Unit (OU) like:
@@ -96,7 +112,7 @@ On the **INTERNAL** adapter:
 
 ## 7) Enable internet for the internal network (RAS/NAT)
 
-Goal: Client on Internal Network can browse the web **through** the DC.
+⭐Goal: Client on Internal Network can browse the web **through** the DC.
 
 1. Server Manager → Add Roles and Features
 2. Install **Remote Access**
@@ -111,6 +127,8 @@ Goal: Client on Internal Network can browse the web **through** the DC.
 
 ## 8) Set up DHCP on the Domain Controller
 
+⭐Goal: Automate IP address assignment and support scalable endpoint onboarding.
+
 1. Server Manager → Add Roles and Features → **DHCP Server**
 2. After install: complete DHCP post-install config
 3. In DHCP console:
@@ -124,17 +142,21 @@ Goal: Client on Internal Network can browse the web **through** the DC.
 
 ## 9) Bulk-create users with PowerShell (“1k users”)
 
+⭐Goal: Simulate enterprise-scale identity provisioning and demonstrate automation skills relevant to IAM and SOC operations.
+
 Paste this link into Internet Explorer's URL:  https://github.com/joshmadakor1/AD_PS/archive/master.zip
 1. Save it on to your desktop in your VM
 2. Open **PowerShell as Administrator** on the DC
 3. Run the script (edit variables first like password + count)
-  - How to run the script:
-    - In the command line type: Set-ExecutionPolicy Unrestricted
-    - Next, you will navigate the to the file path of the creation script by typing: c:\users\your-admin-name\desktop\AD_PS-master then press the play button up       top and your script will run
+  - To allow script execution, in the command line type: Set-ExecutionPolicy Unrestricted
+  - Navigate to script directory by typing: c:\users\your-admin-name\desktop\AD_PS-master then press the green play button above and your script will run
    
 ---
 
 ## 10) Create the Windows 10 Client VM and join it to the domain
+
+⭐Goal: Simulate an employee workstation in an enterprise domain.
+
 ### A) Create the VM
 1. VirtualBox → **New**
 2. Name: `CLIENT1`
