@@ -9,7 +9,7 @@ This project was designed and deployed to simulate an enterprise Active Director
 - 1 Domain Controller VM (Windows Server 2019) with two NICs
 - NIC 1: NAT (internet access)
 - NIC 2: Internal Network (private lab network)
-- 1 Client VM (Windows 10) on the Internal Network**
+- 1 Client VM (Windows 10) on the Internal Network
 - DC provides: AD DS + DNS + DHCP, and RAS/NAT so the client can reach the internet through the DC
 
 ---
