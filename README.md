@@ -24,15 +24,15 @@ This project was designed and deployed to simulate an enterprise Active Director
 
 ### Network Architecture Overview
 
-[ Internet ]
+ Internet 
      |
-   ( NAT )
+    NAT 
      |
-[ Domain Controller ]
+ Domain Controller 
      |
-[ Internal Network ]
+ Internal Network 
      |
-[ Windows 10 Client ]
+ Windows 10 Client 
 
 ---
 
