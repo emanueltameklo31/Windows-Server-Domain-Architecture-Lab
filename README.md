@@ -56,7 +56,7 @@ The 64-bit versions are preferable to download.
 - Control Panel → Network & Internet → Network Connections
 - Rename:
   * NAT-facing NIC → `INTERNET`
-  * Internal NIC → `INTERNAL` ([Medium][5])
+  * Internal NIC → `INTERNAL`
 
 ### C) Set static IPv4 on INTERNAL NIC
 
