@@ -19,7 +19,7 @@ This project was designed and deployed to simulate an enterprise Active Director
 2. Download ISOs:
    * **Windows Server 2019** You can use this link: https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019
    * **Windows 10 ISO** You can use this link: https://www.microsoft.com/en-us/software-download/windows10
-The 64-bit versions are preferable to download.
+- Download the 64-bit .iso file for both images.
 
 ---
 
