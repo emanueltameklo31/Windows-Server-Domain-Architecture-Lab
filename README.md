@@ -204,5 +204,8 @@ On CLIENT1:
 - PowerShell – Bulk user creation and directory automation
 - Cybersecurity Foundations – Identity-centric security, privilege management, and enterprise attack-surface awareness
 
-## Acknowledgement
-- Huge shout-out to Josh Madakor for the excellent Active Directory home lab walkthrough that inspired the structure and direction of this project. Check out      his YouTube <a href="https://www.youtube.com/@JoshMadakor">here</a>
+## 🙌 Acknowledgment
+
+This project’s architecture and workflow were inspired by **:contentReference[oaicite:1]{index=1}**’s Active Directory home lab series, which provides an excellent foundation for understanding enterprise identity, access management, and Windows infrastructure security.
+
+🔗 **Reference:** https://www.youtube.com/@JoshMadakor
