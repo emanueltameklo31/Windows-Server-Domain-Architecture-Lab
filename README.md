@@ -16,7 +16,7 @@ This project was designed and deployed to simulate an enterprise Active Director
 
 ## 1) Downloads (one-time)
 
-⭐Goal: Prepare the virtualization and operating system resources required to simulate an enterprise Windows domain environment.
+⭐**Goal**: Prepare the virtualization and operating system resources required to simulate an enterprise Windows domain environment.
 
 1. Install **Oracle VirtualBox** 
 2. Download ISOs:
@@ -28,7 +28,7 @@ This project was designed and deployed to simulate an enterprise Active Director
 
 ## 2) Create the Domain Controller VM (Server 2019)
 
-⭐Goal: Create a dedicated virtual server to act as the centralized identity, authentication, and network services host.
+⭐**Goal**: Create a dedicated virtual server to act as the centralized identity, authentication, and network services host.
 
 1. Open **VirtualBox → New**
 2. Name: `DC` (or `Domain Controller`)
@@ -49,7 +49,7 @@ This project was designed and deployed to simulate an enterprise Active Director
 
 ## 3) Install Windows Server 2019
 
-⭐Goal: Deploy a secure server operating system to support enterprise identity and infrastructure services.
+⭐**Goal**: Deploy a secure server operating system to support enterprise identity and infrastructure services.
 
 1. Start the DC VM
 2. Install **Windows Server 2019 Standard (Desktop Experience)** 
@@ -59,7 +59,7 @@ This project was designed and deployed to simulate an enterprise Active Director
 
 ## 4) Name the server + set the Internal NIC static IP
 
-⭐Goal: Ensure consistent identification and reliable network communication for domain and DNS services.
+⭐**Goal**: Ensure consistent identification and reliable network communication for domain and DNS services.
 
 ### A) Rename the server
 - Server Manager → Local Server → Computer name → rename to something like `DC` → reboot
@@ -83,7 +83,7 @@ On the **INTERNAL** adapter:
 
 ## 5) Install Active Directory Domain Services (and DNS) + promote to Domain Controller
 
-⭐Goal: Implement centralized identity, authentication, and authorization for the enterprise environment.
+⭐**Goal**: Implement centralized identity, authentication, and authorization for the enterprise environment.
 
 1. Server Manager → **Add Roles and Features**
 2. Role: **Active Directory Domain Services (AD DS)**
@@ -97,7 +97,7 @@ On the **INTERNAL** adapter:
 
 ## 6) Create an admin Organizational Unit + a “Domain Admin” user (good practice)
 
-⭐Goal: Enforce role separation and least-privilege principles for administrative access.
+⭐**Goal**: Enforce role separation and least-privilege principles for administrative access.
 
 1. Open **Active Directory Users and Computers (ADUC)**
 2. Create an Organizational Unit (OU) like:
@@ -112,7 +112,7 @@ On the **INTERNAL** adapter:
 
 ## 7) Enable internet for the internal network (RAS/NAT)
 
-⭐Goal: Client on Internal Network can browse the web **through** the DC.
+⭐**Goal**: Client on Internal Network can browse the web through the DC.
 
 1. Server Manager → Add Roles and Features
 2. Install **Remote Access**
@@ -127,7 +127,7 @@ On the **INTERNAL** adapter:
 
 ## 8) Set up DHCP on the Domain Controller
 
-⭐Goal: Automate IP address assignment and support scalable endpoint onboarding.
+⭐**Goal**: Automate IP address assignment and support scalable endpoint onboarding.
 
 1. Server Manager → Add Roles and Features → **DHCP Server**
 2. After install: complete DHCP post-install config
@@ -142,7 +142,7 @@ On the **INTERNAL** adapter:
 
 ## 9) Bulk-create users with PowerShell (“1k users”)
 
-⭐Goal: Simulate enterprise-scale identity provisioning and demonstrate automation skills relevant to IAM and SOC operations.
+⭐**Goal**: Simulate enterprise-scale identity provisioning and demonstrate automation skills relevant to IAM and SOC operations.
 
 Paste this link into Internet Explorer's URL:  https://github.com/joshmadakor1/AD_PS/archive/master.zip
 1. Save it on to your desktop in your VM
@@ -155,7 +155,7 @@ Paste this link into Internet Explorer's URL:  https://github.com/joshmadakor1/A
 
 ## 10) Create the Windows 10 Client VM and join it to the domain
 
-⭐Goal: Simulate an employee workstation in an enterprise domain.
+⭐**Goal**: Simulate an employee workstation in an enterprise domain.
 
 ### A) Create the VM
 1. VirtualBox → **New**
