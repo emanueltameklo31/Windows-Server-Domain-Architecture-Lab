@@ -206,6 +206,6 @@ On CLIENT1:
 
 ## 🙌 Acknowledgment
 
-This project’s architecture and workflow were inspired by **Josh Madakor**’s Active Directory home lab series, which provides an excellent foundation for understanding enterprise identity, access management, and Windows infrastructure security.
+This project’s architecture and workflow were inspired by **Josh Madakor's** Active Directory home lab series, which provides an excellent foundation for understanding enterprise identity, access management, and Windows infrastructure security.
 
 🔗 **Reference:** https://www.youtube.com/@JoshMadakor
