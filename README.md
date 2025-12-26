@@ -14,7 +14,7 @@ This project was designed and deployed to simulate an enterprise Active Director
 
 ---
 
-1) Downloads (one-time)
+## 1) Downloads (one-time)
 1. Install **Oracle VirtualBox** 
 2. Download ISOs:
    * **Windows Server 2019** You can use this link: https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019
@@ -23,7 +23,7 @@ This project was designed and deployed to simulate an enterprise Active Director
 
 ---
 
-## 1) Create the Domain Controller VM (Server 2019)
+## 2) Create the Domain Controller VM (Server 2019)
 1. Open **VirtualBox → New**
 2. Name: `DC` (or `Domain Controller`)
 3. Type: **Microsoft Windows**
@@ -41,14 +41,14 @@ This project was designed and deployed to simulate an enterprise Active Director
 
 ---
 
-## 2) Install Windows Server 2019
+## 3) Install Windows Server 2019
 1. Start the DC VM
 2. Install **Windows Server 2019 Standard (Desktop Experience)** 
 3. Create the local Administrator password and sign in 
 
 ---
 
-## 3) Name the server + set the Internal NIC static IP
+## 4) Name the server + set the Internal NIC static IP
 ### A) Rename the server
 - Server Manager → Local Server → Computer name → rename to something like `DC` → reboot
 
@@ -69,7 +69,7 @@ On the **INTERNAL** adapter:
 
 ---
 
-## 4) Install AD DS (and DNS) + promote to Domain Controller
+## 5) Install AD DS (and DNS) + promote to Domain Controller
 
 1. Server Manager → **Add Roles and Features**
 2. Role: **Active Directory Domain Services (AD DS)**
@@ -81,7 +81,7 @@ On the **INTERNAL** adapter:
 
 ---
 
-## 5) Create an admin OU + a “Domain Admin” user (good practice)
+## 6) Create an admin OU + a “Domain Admin” user (good practice)
 
 1. Open **Active Directory Users and Computers (ADUC)**
 2. Create an Organizational Unit (OU) like:
@@ -94,7 +94,7 @@ On the **INTERNAL** adapter:
 
 ---
 
-## 6) Enable internet for the internal network (RAS/NAT)
+## 7) Enable internet for the internal network (RAS/NAT)
 
 Goal: Client on Internal Network can browse the web **through** the DC.
 
@@ -109,7 +109,7 @@ Goal: Client on Internal Network can browse the web **through** the DC.
 
 ---
 
-## 7) Set up DHCP on the Domain Controller
+## 8) Set up DHCP on the Domain Controller
 
 1. Server Manager → Add Roles and Features → **DHCP Server**
 2. After install: complete DHCP post-install config
@@ -122,7 +122,7 @@ Goal: Client on Internal Network can browse the web **through** the DC.
 
 ---
 
-## 8) Bulk-create users with PowerShell (“1k users”)
+## 9) Bulk-create users with PowerShell (“1k users”)
 
 Paste this link into Internet Explorer's URL:  https://github.com/joshmadakor1/AD_PS/archive/master.zip
 1. Save it on to your desktop in your VM
@@ -134,7 +134,7 @@ Paste this link into Internet Explorer's URL:  https://github.com/joshmadakor1/A
    
 ---
 
-## 9) Create the Windows 10 Client VM and join it to the domain
+## 10) Create the Windows 10 Client VM and join it to the domain
 ### A) Create the VM
 1. VirtualBox → **New**
 2. Name: `CLIENT1`
