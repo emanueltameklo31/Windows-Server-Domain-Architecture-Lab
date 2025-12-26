@@ -1,4 +1,4 @@
-# Windows-Server-Domain-Architecture-Lab
+# Windows-Server-Domain-Architecture
 
 ## 📌 Overview
 This project was designed and deployed to simulate an enterprise Active Directory environment with centralized identity and access management, secure network services (DNS, DHCP, NAT), and domain-joined endpoints, serving as a foundation for cybersecurity monitoring, privilege management, and identity-based threat scenarios. This kind of enviroment is what you’d expect to see in corporate IT, government networks, and DoD-aligned organizations.
